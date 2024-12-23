@@ -36,14 +36,6 @@ package net.runelite.client.party;
     private long partyId_;
     /**
      * <code>int64 partyId = 1;</code>
-     * @return The partyId.
-     */
-    @java.lang.Override
-    public long getPartyId() {
-      return partyId_;
-    }
-    /**
-     * <code>int64 partyId = 1;</code>
      * @param value The partyId to set.
      */
     private void setPartyId(long value) {
@@ -180,16 +172,6 @@ package net.runelite.client.party;
       // Construct using net.runelite.client.party.Party.Join.newBuilder()
       private Builder() {
         super(DEFAULT_INSTANCE);
-      }
-
-
-      /**
-       * <code>int64 partyId = 1;</code>
-       * @return The partyId.
-       */
-      @java.lang.Override
-      public long getPartyId() {
-        return instance.getPartyId();
       }
       /**
        * <code>int64 partyId = 1;</code>
