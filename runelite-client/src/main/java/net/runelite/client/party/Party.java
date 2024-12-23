@@ -7,10 +7,6 @@ package net.runelite.client.party;
     private Party() {
     }
 
-    public static void registerAllExtensions(
-            com.google.protobuf.ExtensionRegistryLite registry) {
-    }
-
     public interface JoinOrBuilder extends
             // @@protoc_insertion_point(interface_extends:party.Join)
             com.google.protobuf.MessageLiteOrBuilder {
@@ -44,8 +40,6 @@ package net.runelite.client.party;
             JoinOrBuilder {
         private Join() {
         }
-
-        public static final int PARTYID_FIELD_NUMBER = 1;
         private long partyId_;
 
         /**
@@ -67,16 +61,6 @@ package net.runelite.client.party;
 
             partyId_ = value;
         }
-
-        /**
-         * <code>int64 partyId = 1;</code>
-         */
-        private void clearPartyId() {
-
-            partyId_ = 0L;
-        }
-
-        public static final int MEMBERID_FIELD_NUMBER = 2;
         private long memberId_;
 
         /**
@@ -99,105 +83,12 @@ package net.runelite.client.party;
             memberId_ = value;
         }
 
-        /**
-         * <code>int64 memberId = 2;</code>
-         */
-        private void clearMemberId() {
-
-            memberId_ = 0L;
-        }
-
-        public static net.runelite.client.party.Party.Join parseFrom(
-                java.nio.ByteBuffer data)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data);
-        }
-
-        public static net.runelite.client.party.Party.Join parseFrom(
-                java.nio.ByteBuffer data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data, extensionRegistry);
-        }
-
-        public static net.runelite.client.party.Party.Join parseFrom(
-                com.google.protobuf.ByteString data)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data);
-        }
-
-        public static net.runelite.client.party.Party.Join parseFrom(
-                com.google.protobuf.ByteString data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data, extensionRegistry);
-        }
-
-        public static net.runelite.client.party.Party.Join parseFrom(byte[] data)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data);
-        }
-
-        public static net.runelite.client.party.Party.Join parseFrom(
-                byte[] data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data, extensionRegistry);
-        }
-
-        public static net.runelite.client.party.Party.Join parseFrom(java.io.InputStream input)
-                throws java.io.IOException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, input);
-        }
-
-        public static net.runelite.client.party.Party.Join parseFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws java.io.IOException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, input, extensionRegistry);
-        }
-
-        public static net.runelite.client.party.Party.Join parseDelimitedFrom(java.io.InputStream input)
-                throws java.io.IOException {
-            return parseDelimitedFrom(DEFAULT_INSTANCE, input);
-        }
-
-        public static net.runelite.client.party.Party.Join parseDelimitedFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws java.io.IOException {
-            return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
-        }
-
-        public static net.runelite.client.party.Party.Join parseFrom(
-                com.google.protobuf.CodedInputStream input)
-                throws java.io.IOException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, input);
-        }
-
-        public static net.runelite.client.party.Party.Join parseFrom(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws java.io.IOException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, input, extensionRegistry);
-        }
-
         public static Builder newBuilder() {
-            return (Builder) DEFAULT_INSTANCE.createBuilder();
+            return DEFAULT_INSTANCE.createBuilder();
         }
 
         public static Builder newBuilder(net.runelite.client.party.Party.Join prototype) {
-            return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+            return DEFAULT_INSTANCE.createBuilder(prototype);
         }
 
         /**
@@ -240,16 +131,7 @@ package net.runelite.client.party;
                 return this;
             }
 
-            /**
-             * <code>int64 partyId = 1;</code>
-             *
-             * @return This builder for chaining.
-             */
-            public Builder clearPartyId() {
-                copyOnWrite();
-                instance.clearPartyId();
-                return this;
-            }
+
 
             /**
              * <code>int64 memberId = 2;</code>
@@ -273,23 +155,12 @@ package net.runelite.client.party;
                 return this;
             }
 
-            /**
-             * <code>int64 memberId = 2;</code>
-             *
-             * @return This builder for chaining.
-             */
-            public Builder clearMemberId() {
-                copyOnWrite();
-                instance.clearMemberId();
-                return this;
-            }
-
             // @@protoc_insertion_point(builder_scope:party.Join)
         }
 
         @java.lang.Override
         @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
-        protected final java.lang.Object dynamicMethod(
+        protected java.lang.Object dynamicMethod(
                 com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
                 java.lang.Object arg0, java.lang.Object arg1) {
             switch (method) {
@@ -305,8 +176,7 @@ package net.runelite.client.party;
                             "memberId_",
                     };
                     java.lang.String info =
-                            "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0002\u0002\u0002" +
-                            "";
+                            "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0002\u0002\u0002";
                     return newMessageInfo(DEFAULT_INSTANCE, info, objects);
                 }
                 // fall through
@@ -320,7 +190,7 @@ package net.runelite.client.party;
                             parser = PARSER;
                             if (parser == null) {
                                 parser =
-                                        new DefaultInstanceBasedParser<net.runelite.client.party.Party.Join>(
+                                        new DefaultInstanceBasedParser<>(
                                                 DEFAULT_INSTANCE);
                                 PARSER = parser;
                             }
@@ -356,10 +226,6 @@ package net.runelite.client.party;
         }
 
         private static volatile com.google.protobuf.Parser<Join> PARSER;
-
-        public static com.google.protobuf.Parser<Join> parser() {
-            return DEFAULT_INSTANCE.getParserForType();
-        }
     }
 
     public interface PartOrBuilder extends
@@ -378,97 +244,13 @@ package net.runelite.client.party;
         private Part() {
         }
 
-        public static net.runelite.client.party.Party.Part parseFrom(
-                java.nio.ByteBuffer data)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data);
-        }
-
-        public static net.runelite.client.party.Party.Part parseFrom(
-                java.nio.ByteBuffer data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data, extensionRegistry);
-        }
-
-        public static net.runelite.client.party.Party.Part parseFrom(
-                com.google.protobuf.ByteString data)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data);
-        }
-
-        public static net.runelite.client.party.Party.Part parseFrom(
-                com.google.protobuf.ByteString data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data, extensionRegistry);
-        }
-
-        public static net.runelite.client.party.Party.Part parseFrom(byte[] data)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data);
-        }
-
-        public static net.runelite.client.party.Party.Part parseFrom(
-                byte[] data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data, extensionRegistry);
-        }
-
-        public static net.runelite.client.party.Party.Part parseFrom(java.io.InputStream input)
-                throws java.io.IOException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, input);
-        }
-
-        public static net.runelite.client.party.Party.Part parseFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws java.io.IOException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, input, extensionRegistry);
-        }
-
-        public static net.runelite.client.party.Party.Part parseDelimitedFrom(java.io.InputStream input)
-                throws java.io.IOException {
-            return parseDelimitedFrom(DEFAULT_INSTANCE, input);
-        }
-
-        public static net.runelite.client.party.Party.Part parseDelimitedFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws java.io.IOException {
-            return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
-        }
-
-        public static net.runelite.client.party.Party.Part parseFrom(
-                com.google.protobuf.CodedInputStream input)
-                throws java.io.IOException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, input);
-        }
-
-        public static net.runelite.client.party.Party.Part parseFrom(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws java.io.IOException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, input, extensionRegistry);
-        }
 
         public static Builder newBuilder() {
-            return (Builder) DEFAULT_INSTANCE.createBuilder();
+            return DEFAULT_INSTANCE.createBuilder();
         }
 
         public static Builder newBuilder(net.runelite.client.party.Party.Part prototype) {
-            return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+            return DEFAULT_INSTANCE.createBuilder(prototype);
         }
 
         /**
@@ -490,7 +272,7 @@ package net.runelite.client.party;
 
         @java.lang.Override
         @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
-        protected final java.lang.Object dynamicMethod(
+        protected java.lang.Object dynamicMethod(
                 com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
                 java.lang.Object arg0, java.lang.Object arg1) {
             switch (method) {
@@ -517,7 +299,7 @@ package net.runelite.client.party;
                             parser = PARSER;
                             if (parser == null) {
                                 parser =
-                                        new DefaultInstanceBasedParser<net.runelite.client.party.Party.Part>(
+                                        new DefaultInstanceBasedParser<>(
                                                 DEFAULT_INSTANCE);
                                 PARSER = parser;
                             }
@@ -553,10 +335,6 @@ package net.runelite.client.party;
         }
 
         private static volatile com.google.protobuf.Parser<Part> PARSER;
-
-        public static com.google.protobuf.Parser<Part> parser() {
-            return DEFAULT_INSTANCE.getParserForType();
-        }
     }
 
     public interface DataOrBuilder extends
@@ -599,7 +377,6 @@ package net.runelite.client.party;
             data_ = com.google.protobuf.ByteString.EMPTY;
         }
 
-        public static final int TYPE_FIELD_NUMBER = 2;
         private java.lang.String type_;
 
         /**
@@ -635,27 +412,6 @@ package net.runelite.client.party;
             type_ = value;
         }
 
-        /**
-         * <code>string type = 2;</code>
-         */
-        private void clearType() {
-
-            type_ = getDefaultInstance().getType();
-        }
-
-        /**
-         * <code>string type = 2;</code>
-         *
-         * @param value The bytes for type to set.
-         */
-        private void setTypeBytes(
-                com.google.protobuf.ByteString value) {
-            checkByteStringIsUtf8(value);
-            type_ = value.toStringUtf8();
-
-        }
-
-        public static final int DATA_FIELD_NUMBER = 1;
         private com.google.protobuf.ByteString data_;
 
         /**
@@ -679,105 +435,12 @@ package net.runelite.client.party;
             data_ = value;
         }
 
-        /**
-         * <code>bytes data = 1;</code>
-         */
-        private void clearData() {
-
-            data_ = getDefaultInstance().getData();
-        }
-
-        public static net.runelite.client.party.Party.Data parseFrom(
-                java.nio.ByteBuffer data)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data);
-        }
-
-        public static net.runelite.client.party.Party.Data parseFrom(
-                java.nio.ByteBuffer data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data, extensionRegistry);
-        }
-
-        public static net.runelite.client.party.Party.Data parseFrom(
-                com.google.protobuf.ByteString data)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data);
-        }
-
-        public static net.runelite.client.party.Party.Data parseFrom(
-                com.google.protobuf.ByteString data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data, extensionRegistry);
-        }
-
-        public static net.runelite.client.party.Party.Data parseFrom(byte[] data)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data);
-        }
-
-        public static net.runelite.client.party.Party.Data parseFrom(
-                byte[] data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data, extensionRegistry);
-        }
-
-        public static net.runelite.client.party.Party.Data parseFrom(java.io.InputStream input)
-                throws java.io.IOException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, input);
-        }
-
-        public static net.runelite.client.party.Party.Data parseFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws java.io.IOException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, input, extensionRegistry);
-        }
-
-        public static net.runelite.client.party.Party.Data parseDelimitedFrom(java.io.InputStream input)
-                throws java.io.IOException {
-            return parseDelimitedFrom(DEFAULT_INSTANCE, input);
-        }
-
-        public static net.runelite.client.party.Party.Data parseDelimitedFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws java.io.IOException {
-            return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
-        }
-
-        public static net.runelite.client.party.Party.Data parseFrom(
-                com.google.protobuf.CodedInputStream input)
-                throws java.io.IOException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, input);
-        }
-
-        public static net.runelite.client.party.Party.Data parseFrom(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws java.io.IOException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, input, extensionRegistry);
-        }
-
         public static Builder newBuilder() {
-            return (Builder) DEFAULT_INSTANCE.createBuilder();
+            return DEFAULT_INSTANCE.createBuilder();
         }
 
         public static Builder newBuilder(net.runelite.client.party.Party.Data prototype) {
-            return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+            return DEFAULT_INSTANCE.createBuilder(prototype);
         }
 
         /**
@@ -828,29 +491,6 @@ package net.runelite.client.party;
                 return this;
             }
 
-            /**
-             * <code>string type = 2;</code>
-             *
-             * @return This builder for chaining.
-             */
-            public Builder clearType() {
-                copyOnWrite();
-                instance.clearType();
-                return this;
-            }
-
-            /**
-             * <code>string type = 2;</code>
-             *
-             * @param value The bytes for type to set.
-             * @return This builder for chaining.
-             */
-            public Builder setTypeBytes(
-                    com.google.protobuf.ByteString value) {
-                copyOnWrite();
-                instance.setTypeBytes(value);
-                return this;
-            }
 
             /**
              * <code>bytes data = 1;</code>
@@ -874,23 +514,13 @@ package net.runelite.client.party;
                 return this;
             }
 
-            /**
-             * <code>bytes data = 1;</code>
-             *
-             * @return This builder for chaining.
-             */
-            public Builder clearData() {
-                copyOnWrite();
-                instance.clearData();
-                return this;
-            }
 
             // @@protoc_insertion_point(builder_scope:party.Data)
         }
 
         @java.lang.Override
         @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
-        protected final java.lang.Object dynamicMethod(
+        protected java.lang.Object dynamicMethod(
                 com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
                 java.lang.Object arg0, java.lang.Object arg1) {
             switch (method) {
@@ -906,8 +536,7 @@ package net.runelite.client.party;
                             "type_",
                     };
                     java.lang.String info =
-                            "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\n\u0002\u0208" +
-                            "";
+                            "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\n\u0002\u0208";
                     return newMessageInfo(DEFAULT_INSTANCE, info, objects);
                 }
                 // fall through
@@ -921,7 +550,7 @@ package net.runelite.client.party;
                             parser = PARSER;
                             if (parser == null) {
                                 parser =
-                                        new DefaultInstanceBasedParser<net.runelite.client.party.Party.Data>(
+                                        new DefaultInstanceBasedParser<>(
                                                 DEFAULT_INSTANCE);
                                 PARSER = parser;
                             }
@@ -958,9 +587,6 @@ package net.runelite.client.party;
 
         private static volatile com.google.protobuf.Parser<Data> PARSER;
 
-        public static com.google.protobuf.Parser<Data> parser() {
-            return DEFAULT_INSTANCE.getParserForType();
-        }
     }
 
     public interface C2SOrBuilder extends
@@ -1033,7 +659,7 @@ package net.runelite.client.party;
             MSG_NOT_SET(0);
             private final int value;
 
-            private MsgCase(int value) {
+            MsgCase(int value) {
                 this.value = value;
             }
 
@@ -1065,21 +691,12 @@ package net.runelite.client.party;
             }
         }
 
-        ;
-
         @java.lang.Override
         public MsgCase
         getMsgCase() {
             return MsgCase.forNumber(
                     msgCase_);
         }
-
-        private void clearMsg() {
-            msgCase_ = 0;
-            msg_ = null;
-        }
-
-        public static final int JOIN_FIELD_NUMBER = 1;
 
         /**
          * <code>.party.Join join = 1;</code>
@@ -1108,33 +725,6 @@ package net.runelite.client.party;
             msg_ = value;
             msgCase_ = 1;
         }
-
-        /**
-         * <code>.party.Join join = 1;</code>
-         */
-        private void mergeJoin(net.runelite.client.party.Party.Join value) {
-            value.getClass();
-            if (msgCase_ == 1 &&
-                msg_ != net.runelite.client.party.Party.Join.getDefaultInstance()) {
-                msg_ = net.runelite.client.party.Party.Join.newBuilder((net.runelite.client.party.Party.Join) msg_)
-                        .mergeFrom(value).buildPartial();
-            } else {
-                msg_ = value;
-            }
-            msgCase_ = 1;
-        }
-
-        /**
-         * <code>.party.Join join = 1;</code>
-         */
-        private void clearJoin() {
-            if (msgCase_ == 1) {
-                msgCase_ = 0;
-                msg_ = null;
-            }
-        }
-
-        public static final int PART_FIELD_NUMBER = 2;
 
         /**
          * <code>.party.Part part = 2;</code>
@@ -1167,29 +757,12 @@ package net.runelite.client.party;
         /**
          * <code>.party.Part part = 2;</code>
          */
-        private void mergePart(net.runelite.client.party.Party.Part value) {
-            value.getClass();
-            if (msgCase_ == 2 &&
-                msg_ != net.runelite.client.party.Party.Part.getDefaultInstance()) {
-                msg_ = net.runelite.client.party.Party.Part.newBuilder((net.runelite.client.party.Party.Part) msg_)
-                        .mergeFrom(value).buildPartial();
-            } else {
-                msg_ = value;
-            }
-            msgCase_ = 2;
-        }
-
-        /**
-         * <code>.party.Part part = 2;</code>
-         */
         private void clearPart() {
             if (msgCase_ == 2) {
                 msgCase_ = 0;
                 msg_ = null;
             }
         }
-
-        public static final int DATA_FIELD_NUMBER = 3;
 
         /**
          * <code>.party.Data data = 3;</code>
@@ -1219,122 +792,12 @@ package net.runelite.client.party;
             msgCase_ = 3;
         }
 
-        /**
-         * <code>.party.Data data = 3;</code>
-         */
-        private void mergeData(net.runelite.client.party.Party.Data value) {
-            value.getClass();
-            if (msgCase_ == 3 &&
-                msg_ != net.runelite.client.party.Party.Data.getDefaultInstance()) {
-                msg_ = net.runelite.client.party.Party.Data.newBuilder((net.runelite.client.party.Party.Data) msg_)
-                        .mergeFrom(value).buildPartial();
-            } else {
-                msg_ = value;
-            }
-            msgCase_ = 3;
-        }
-
-        /**
-         * <code>.party.Data data = 3;</code>
-         */
-        private void clearData() {
-            if (msgCase_ == 3) {
-                msgCase_ = 0;
-                msg_ = null;
-            }
-        }
-
-        public static net.runelite.client.party.Party.C2S parseFrom(
-                java.nio.ByteBuffer data)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data);
-        }
-
-        public static net.runelite.client.party.Party.C2S parseFrom(
-                java.nio.ByteBuffer data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data, extensionRegistry);
-        }
-
-        public static net.runelite.client.party.Party.C2S parseFrom(
-                com.google.protobuf.ByteString data)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data);
-        }
-
-        public static net.runelite.client.party.Party.C2S parseFrom(
-                com.google.protobuf.ByteString data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data, extensionRegistry);
-        }
-
-        public static net.runelite.client.party.Party.C2S parseFrom(byte[] data)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data);
-        }
-
-        public static net.runelite.client.party.Party.C2S parseFrom(
-                byte[] data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data, extensionRegistry);
-        }
-
-        public static net.runelite.client.party.Party.C2S parseFrom(java.io.InputStream input)
-                throws java.io.IOException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, input);
-        }
-
-        public static net.runelite.client.party.Party.C2S parseFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws java.io.IOException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, input, extensionRegistry);
-        }
-
-        public static net.runelite.client.party.Party.C2S parseDelimitedFrom(java.io.InputStream input)
-                throws java.io.IOException {
-            return parseDelimitedFrom(DEFAULT_INSTANCE, input);
-        }
-
-        public static net.runelite.client.party.Party.C2S parseDelimitedFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws java.io.IOException {
-            return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
-        }
-
-        public static net.runelite.client.party.Party.C2S parseFrom(
-                com.google.protobuf.CodedInputStream input)
-                throws java.io.IOException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, input);
-        }
-
-        public static net.runelite.client.party.Party.C2S parseFrom(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws java.io.IOException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, input, extensionRegistry);
-        }
-
         public static Builder newBuilder() {
-            return (Builder) DEFAULT_INSTANCE.createBuilder();
+            return DEFAULT_INSTANCE.createBuilder();
         }
 
         public static Builder newBuilder(net.runelite.client.party.Party.C2S prototype) {
-            return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+            return DEFAULT_INSTANCE.createBuilder(prototype);
         }
 
         /**
@@ -1354,12 +817,6 @@ package net.runelite.client.party;
             public MsgCase
             getMsgCase() {
                 return instance.getMsgCase();
-            }
-
-            public Builder clearMsg() {
-                copyOnWrite();
-                instance.clearMsg();
-                return this;
             }
 
 
@@ -1399,24 +856,6 @@ package net.runelite.client.party;
             }
 
             /**
-             * <code>.party.Join join = 1;</code>
-             */
-            public Builder mergeJoin(net.runelite.client.party.Party.Join value) {
-                copyOnWrite();
-                instance.mergeJoin(value);
-                return this;
-            }
-
-            /**
-             * <code>.party.Join join = 1;</code>
-             */
-            public Builder clearJoin() {
-                copyOnWrite();
-                instance.clearJoin();
-                return this;
-            }
-
-            /**
              * <code>.party.Part part = 2;</code>
              */
             @java.lang.Override
@@ -1448,24 +887,6 @@ package net.runelite.client.party;
                     net.runelite.client.party.Party.Part.Builder builderForValue) {
                 copyOnWrite();
                 instance.setPart(builderForValue.build());
-                return this;
-            }
-
-            /**
-             * <code>.party.Part part = 2;</code>
-             */
-            public Builder mergePart(net.runelite.client.party.Party.Part value) {
-                copyOnWrite();
-                instance.mergePart(value);
-                return this;
-            }
-
-            /**
-             * <code>.party.Part part = 2;</code>
-             */
-            public Builder clearPart() {
-                copyOnWrite();
-                instance.clearPart();
                 return this;
             }
 
@@ -1503,31 +924,12 @@ package net.runelite.client.party;
                 instance.setData(builderForValue.build());
                 return this;
             }
-
-            /**
-             * <code>.party.Data data = 3;</code>
-             */
-            public Builder mergeData(net.runelite.client.party.Party.Data value) {
-                copyOnWrite();
-                instance.mergeData(value);
-                return this;
-            }
-
-            /**
-             * <code>.party.Data data = 3;</code>
-             */
-            public Builder clearData() {
-                copyOnWrite();
-                instance.clearData();
-                return this;
-            }
-
             // @@protoc_insertion_point(builder_scope:party.C2S)
         }
 
         @java.lang.Override
         @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
-        protected final java.lang.Object dynamicMethod(
+        protected java.lang.Object dynamicMethod(
                 com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
                 java.lang.Object arg0, java.lang.Object arg1) {
             switch (method) {
@@ -1547,7 +949,7 @@ package net.runelite.client.party;
                     };
                     java.lang.String info =
                             "\u0000\u0003\u0001\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001<\u0000\u0002<" +
-                            "\u0000\u0003<\u0000";
+                                    "\u0000\u0003<\u0000";
                     return newMessageInfo(DEFAULT_INSTANCE, info, objects);
                 }
                 // fall through
@@ -1592,15 +994,7 @@ package net.runelite.client.party;
                     C2S.class, defaultInstance);
         }
 
-        public static net.runelite.client.party.Party.C2S getDefaultInstance() {
-            return DEFAULT_INSTANCE;
-        }
-
         private static volatile com.google.protobuf.Parser<C2S> PARSER;
-
-        public static com.google.protobuf.Parser<C2S> parser() {
-            return DEFAULT_INSTANCE.getParserForType();
-        }
     }
 
     public interface UserJoinOrBuilder extends
@@ -1636,8 +1030,6 @@ package net.runelite.client.party;
             UserJoinOrBuilder {
         private UserJoin() {
         }
-
-        public static final int PARTYID_FIELD_NUMBER = 1;
         private long partyId_;
 
         /**
@@ -1667,8 +1059,6 @@ package net.runelite.client.party;
 
             partyId_ = 0L;
         }
-
-        public static final int MEMBERID_FIELD_NUMBER = 2;
         private long memberId_;
 
         /**
@@ -1699,97 +1089,12 @@ package net.runelite.client.party;
             memberId_ = 0L;
         }
 
-        public static net.runelite.client.party.Party.UserJoin parseFrom(
-                java.nio.ByteBuffer data)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data);
-        }
-
-        public static net.runelite.client.party.Party.UserJoin parseFrom(
-                java.nio.ByteBuffer data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data, extensionRegistry);
-        }
-
-        public static net.runelite.client.party.Party.UserJoin parseFrom(
-                com.google.protobuf.ByteString data)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data);
-        }
-
-        public static net.runelite.client.party.Party.UserJoin parseFrom(
-                com.google.protobuf.ByteString data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data, extensionRegistry);
-        }
-
-        public static net.runelite.client.party.Party.UserJoin parseFrom(byte[] data)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data);
-        }
-
-        public static net.runelite.client.party.Party.UserJoin parseFrom(
-                byte[] data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data, extensionRegistry);
-        }
-
-        public static net.runelite.client.party.Party.UserJoin parseFrom(java.io.InputStream input)
-                throws java.io.IOException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, input);
-        }
-
-        public static net.runelite.client.party.Party.UserJoin parseFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws java.io.IOException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, input, extensionRegistry);
-        }
-
-        public static net.runelite.client.party.Party.UserJoin parseDelimitedFrom(java.io.InputStream input)
-                throws java.io.IOException {
-            return parseDelimitedFrom(DEFAULT_INSTANCE, input);
-        }
-
-        public static net.runelite.client.party.Party.UserJoin parseDelimitedFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws java.io.IOException {
-            return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
-        }
-
-        public static net.runelite.client.party.Party.UserJoin parseFrom(
-                com.google.protobuf.CodedInputStream input)
-                throws java.io.IOException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, input);
-        }
-
-        public static net.runelite.client.party.Party.UserJoin parseFrom(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws java.io.IOException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, input, extensionRegistry);
-        }
-
         public static Builder newBuilder() {
-            return (Builder) DEFAULT_INSTANCE.createBuilder();
+            return DEFAULT_INSTANCE.createBuilder();
         }
 
         public static Builder newBuilder(net.runelite.client.party.Party.UserJoin prototype) {
-            return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+            return DEFAULT_INSTANCE.createBuilder(prototype);
         }
 
         /**
@@ -1818,29 +1123,6 @@ package net.runelite.client.party;
             @java.lang.Override
             public long getPartyId() {
                 return instance.getPartyId();
-            }
-
-            /**
-             * <code>int64 partyId = 1;</code>
-             *
-             * @param value The partyId to set.
-             * @return This builder for chaining.
-             */
-            public Builder setPartyId(long value) {
-                copyOnWrite();
-                instance.setPartyId(value);
-                return this;
-            }
-
-            /**
-             * <code>int64 partyId = 1;</code>
-             *
-             * @return This builder for chaining.
-             */
-            public Builder clearPartyId() {
-                copyOnWrite();
-                instance.clearPartyId();
-                return this;
             }
 
             /**
@@ -1881,7 +1163,7 @@ package net.runelite.client.party;
 
         @java.lang.Override
         @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
-        protected final java.lang.Object dynamicMethod(
+        protected java.lang.Object dynamicMethod(
                 com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
                 java.lang.Object arg0, java.lang.Object arg1) {
             switch (method) {
@@ -1897,8 +1179,7 @@ package net.runelite.client.party;
                             "memberId_",
                     };
                     java.lang.String info =
-                            "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0002\u0002\u0002" +
-                            "";
+                            "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0002\u0002\u0002";
                     return newMessageInfo(DEFAULT_INSTANCE, info, objects);
                 }
                 // fall through
@@ -1912,7 +1193,7 @@ package net.runelite.client.party;
                             parser = PARSER;
                             if (parser == null) {
                                 parser =
-                                        new DefaultInstanceBasedParser<net.runelite.client.party.Party.UserJoin>(
+                                        new DefaultInstanceBasedParser<>(
                                                 DEFAULT_INSTANCE);
                                 PARSER = parser;
                             }
@@ -1948,10 +1229,6 @@ package net.runelite.client.party;
         }
 
         private static volatile com.google.protobuf.Parser<UserJoin> PARSER;
-
-        public static com.google.protobuf.Parser<UserJoin> parser() {
-            return DEFAULT_INSTANCE.getParserForType();
-        }
     }
 
     public interface UserPartOrBuilder extends
@@ -1983,8 +1260,6 @@ package net.runelite.client.party;
             UserPartOrBuilder {
         private UserPart() {
         }
-
-        public static final int PARTYID_FIELD_NUMBER = 1;
         private long partyId_;
 
         /**
@@ -1996,26 +1271,6 @@ package net.runelite.client.party;
         public long getPartyId() {
             return partyId_;
         }
-
-        /**
-         * <code>int64 partyId = 1;</code>
-         *
-         * @param value The partyId to set.
-         */
-        private void setPartyId(long value) {
-
-            partyId_ = value;
-        }
-
-        /**
-         * <code>int64 partyId = 1;</code>
-         */
-        private void clearPartyId() {
-
-            partyId_ = 0L;
-        }
-
-        public static final int MEMBERID_FIELD_NUMBER = 2;
         private long memberId_;
 
         /**
@@ -2038,105 +1293,12 @@ package net.runelite.client.party;
             memberId_ = value;
         }
 
-        /**
-         * <code>int64 memberId = 2;</code>
-         */
-        private void clearMemberId() {
-
-            memberId_ = 0L;
-        }
-
-        public static net.runelite.client.party.Party.UserPart parseFrom(
-                java.nio.ByteBuffer data)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data);
-        }
-
-        public static net.runelite.client.party.Party.UserPart parseFrom(
-                java.nio.ByteBuffer data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data, extensionRegistry);
-        }
-
-        public static net.runelite.client.party.Party.UserPart parseFrom(
-                com.google.protobuf.ByteString data)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data);
-        }
-
-        public static net.runelite.client.party.Party.UserPart parseFrom(
-                com.google.protobuf.ByteString data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data, extensionRegistry);
-        }
-
-        public static net.runelite.client.party.Party.UserPart parseFrom(byte[] data)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data);
-        }
-
-        public static net.runelite.client.party.Party.UserPart parseFrom(
-                byte[] data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data, extensionRegistry);
-        }
-
-        public static net.runelite.client.party.Party.UserPart parseFrom(java.io.InputStream input)
-                throws java.io.IOException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, input);
-        }
-
-        public static net.runelite.client.party.Party.UserPart parseFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws java.io.IOException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, input, extensionRegistry);
-        }
-
-        public static net.runelite.client.party.Party.UserPart parseDelimitedFrom(java.io.InputStream input)
-                throws java.io.IOException {
-            return parseDelimitedFrom(DEFAULT_INSTANCE, input);
-        }
-
-        public static net.runelite.client.party.Party.UserPart parseDelimitedFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws java.io.IOException {
-            return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
-        }
-
-        public static net.runelite.client.party.Party.UserPart parseFrom(
-                com.google.protobuf.CodedInputStream input)
-                throws java.io.IOException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, input);
-        }
-
-        public static net.runelite.client.party.Party.UserPart parseFrom(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws java.io.IOException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, input, extensionRegistry);
-        }
-
         public static Builder newBuilder() {
-            return (Builder) DEFAULT_INSTANCE.createBuilder();
+            return DEFAULT_INSTANCE.createBuilder();
         }
 
         public static Builder newBuilder(net.runelite.client.party.Party.UserPart prototype) {
-            return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+            return DEFAULT_INSTANCE.createBuilder(prototype);
         }
 
         /**
@@ -2164,29 +1326,6 @@ package net.runelite.client.party;
             }
 
             /**
-             * <code>int64 partyId = 1;</code>
-             *
-             * @param value The partyId to set.
-             * @return This builder for chaining.
-             */
-            public Builder setPartyId(long value) {
-                copyOnWrite();
-                instance.setPartyId(value);
-                return this;
-            }
-
-            /**
-             * <code>int64 partyId = 1;</code>
-             *
-             * @return This builder for chaining.
-             */
-            public Builder clearPartyId() {
-                copyOnWrite();
-                instance.clearPartyId();
-                return this;
-            }
-
-            /**
              * <code>int64 memberId = 2;</code>
              *
              * @return The memberId.
@@ -2208,23 +1347,12 @@ package net.runelite.client.party;
                 return this;
             }
 
-            /**
-             * <code>int64 memberId = 2;</code>
-             *
-             * @return This builder for chaining.
-             */
-            public Builder clearMemberId() {
-                copyOnWrite();
-                instance.clearMemberId();
-                return this;
-            }
-
             // @@protoc_insertion_point(builder_scope:party.UserPart)
         }
 
         @java.lang.Override
         @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
-        protected final java.lang.Object dynamicMethod(
+        protected java.lang.Object dynamicMethod(
                 com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
                 java.lang.Object arg0, java.lang.Object arg1) {
             switch (method) {
@@ -2240,8 +1368,7 @@ package net.runelite.client.party;
                             "memberId_",
                     };
                     java.lang.String info =
-                            "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0002\u0002\u0002" +
-                            "";
+                            "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0002\u0002\u0002";
                     return newMessageInfo(DEFAULT_INSTANCE, info, objects);
                 }
                 // fall through
@@ -2255,7 +1382,7 @@ package net.runelite.client.party;
                             parser = PARSER;
                             if (parser == null) {
                                 parser =
-                                        new DefaultInstanceBasedParser<net.runelite.client.party.Party.UserPart>(
+                                        new DefaultInstanceBasedParser<>(
                                                 DEFAULT_INSTANCE);
                                 PARSER = parser;
                             }
@@ -2291,10 +1418,6 @@ package net.runelite.client.party;
         }
 
         private static volatile com.google.protobuf.Parser<UserPart> PARSER;
-
-        public static com.google.protobuf.Parser<UserPart> parser() {
-            return DEFAULT_INSTANCE.getParserForType();
-        }
     }
 
     public interface PartyDataOrBuilder extends
@@ -2350,8 +1473,6 @@ package net.runelite.client.party;
             type_ = "";
             data_ = com.google.protobuf.ByteString.EMPTY;
         }
-
-        public static final int PARTYID_FIELD_NUMBER = 1;
         private long partyId_;
 
         /**
@@ -2363,26 +1484,6 @@ package net.runelite.client.party;
         public long getPartyId() {
             return partyId_;
         }
-
-        /**
-         * <code>int64 partyId = 1;</code>
-         *
-         * @param value The partyId to set.
-         */
-        private void setPartyId(long value) {
-
-            partyId_ = value;
-        }
-
-        /**
-         * <code>int64 partyId = 1;</code>
-         */
-        private void clearPartyId() {
-
-            partyId_ = 0L;
-        }
-
-        public static final int MEMBERID_FIELD_NUMBER = 2;
         private long memberId_;
 
         /**
@@ -2404,16 +1505,6 @@ package net.runelite.client.party;
 
             memberId_ = value;
         }
-
-        /**
-         * <code>int64 memberId = 2;</code>
-         */
-        private void clearMemberId() {
-
-            memberId_ = 0L;
-        }
-
-        public static final int TYPE_FIELD_NUMBER = 4;
         private java.lang.String type_;
 
         /**
@@ -2448,28 +1539,6 @@ package net.runelite.client.party;
 
             type_ = value;
         }
-
-        /**
-         * <code>string type = 4;</code>
-         */
-        private void clearType() {
-
-            type_ = getDefaultInstance().getType();
-        }
-
-        /**
-         * <code>string type = 4;</code>
-         *
-         * @param value The bytes for type to set.
-         */
-        private void setTypeBytes(
-                com.google.protobuf.ByteString value) {
-            checkByteStringIsUtf8(value);
-            type_ = value.toStringUtf8();
-
-        }
-
-        public static final int DATA_FIELD_NUMBER = 3;
         private com.google.protobuf.ByteString data_;
 
         /**
@@ -2493,105 +1562,12 @@ package net.runelite.client.party;
             data_ = value;
         }
 
-        /**
-         * <code>bytes data = 3;</code>
-         */
-        private void clearData() {
-
-            data_ = getDefaultInstance().getData();
-        }
-
-        public static net.runelite.client.party.Party.PartyData parseFrom(
-                java.nio.ByteBuffer data)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data);
-        }
-
-        public static net.runelite.client.party.Party.PartyData parseFrom(
-                java.nio.ByteBuffer data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data, extensionRegistry);
-        }
-
-        public static net.runelite.client.party.Party.PartyData parseFrom(
-                com.google.protobuf.ByteString data)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data);
-        }
-
-        public static net.runelite.client.party.Party.PartyData parseFrom(
-                com.google.protobuf.ByteString data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data, extensionRegistry);
-        }
-
-        public static net.runelite.client.party.Party.PartyData parseFrom(byte[] data)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data);
-        }
-
-        public static net.runelite.client.party.Party.PartyData parseFrom(
-                byte[] data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data, extensionRegistry);
-        }
-
-        public static net.runelite.client.party.Party.PartyData parseFrom(java.io.InputStream input)
-                throws java.io.IOException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, input);
-        }
-
-        public static net.runelite.client.party.Party.PartyData parseFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws java.io.IOException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, input, extensionRegistry);
-        }
-
-        public static net.runelite.client.party.Party.PartyData parseDelimitedFrom(java.io.InputStream input)
-                throws java.io.IOException {
-            return parseDelimitedFrom(DEFAULT_INSTANCE, input);
-        }
-
-        public static net.runelite.client.party.Party.PartyData parseDelimitedFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws java.io.IOException {
-            return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
-        }
-
-        public static net.runelite.client.party.Party.PartyData parseFrom(
-                com.google.protobuf.CodedInputStream input)
-                throws java.io.IOException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, input);
-        }
-
-        public static net.runelite.client.party.Party.PartyData parseFrom(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws java.io.IOException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, input, extensionRegistry);
-        }
-
         public static Builder newBuilder() {
-            return (Builder) DEFAULT_INSTANCE.createBuilder();
+            return DEFAULT_INSTANCE.createBuilder();
         }
 
         public static Builder newBuilder(net.runelite.client.party.Party.PartyData prototype) {
-            return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+            return DEFAULT_INSTANCE.createBuilder(prototype);
         }
 
         /**
@@ -2619,29 +1595,6 @@ package net.runelite.client.party;
             }
 
             /**
-             * <code>int64 partyId = 1;</code>
-             *
-             * @param value The partyId to set.
-             * @return This builder for chaining.
-             */
-            public Builder setPartyId(long value) {
-                copyOnWrite();
-                instance.setPartyId(value);
-                return this;
-            }
-
-            /**
-             * <code>int64 partyId = 1;</code>
-             *
-             * @return This builder for chaining.
-             */
-            public Builder clearPartyId() {
-                copyOnWrite();
-                instance.clearPartyId();
-                return this;
-            }
-
-            /**
              * <code>int64 memberId = 2;</code>
              *
              * @return The memberId.
@@ -2660,17 +1613,6 @@ package net.runelite.client.party;
             public Builder setMemberId(long value) {
                 copyOnWrite();
                 instance.setMemberId(value);
-                return this;
-            }
-
-            /**
-             * <code>int64 memberId = 2;</code>
-             *
-             * @return This builder for chaining.
-             */
-            public Builder clearMemberId() {
-                copyOnWrite();
-                instance.clearMemberId();
                 return this;
             }
 
@@ -2709,30 +1651,6 @@ package net.runelite.client.party;
             }
 
             /**
-             * <code>string type = 4;</code>
-             *
-             * @return This builder for chaining.
-             */
-            public Builder clearType() {
-                copyOnWrite();
-                instance.clearType();
-                return this;
-            }
-
-            /**
-             * <code>string type = 4;</code>
-             *
-             * @param value The bytes for type to set.
-             * @return This builder for chaining.
-             */
-            public Builder setTypeBytes(
-                    com.google.protobuf.ByteString value) {
-                copyOnWrite();
-                instance.setTypeBytes(value);
-                return this;
-            }
-
-            /**
              * <code>bytes data = 3;</code>
              *
              * @return The data.
@@ -2754,23 +1672,12 @@ package net.runelite.client.party;
                 return this;
             }
 
-            /**
-             * <code>bytes data = 3;</code>
-             *
-             * @return This builder for chaining.
-             */
-            public Builder clearData() {
-                copyOnWrite();
-                instance.clearData();
-                return this;
-            }
-
             // @@protoc_insertion_point(builder_scope:party.PartyData)
         }
 
         @java.lang.Override
         @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
-        protected final java.lang.Object dynamicMethod(
+        protected java.lang.Object dynamicMethod(
                 com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
                 java.lang.Object arg0, java.lang.Object arg1) {
             switch (method) {
@@ -2789,7 +1696,7 @@ package net.runelite.client.party;
                     };
                     java.lang.String info =
                             "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0002\u0002\u0002" +
-                            "\u0003\n\u0004\u0208";
+                                    "\u0003\n\u0004\u0208";
                     return newMessageInfo(DEFAULT_INSTANCE, info, objects);
                 }
                 // fall through
@@ -2839,10 +1746,6 @@ package net.runelite.client.party;
         }
 
         private static volatile com.google.protobuf.Parser<PartyData> PARSER;
-
-        public static com.google.protobuf.Parser<PartyData> parser() {
-            return DEFAULT_INSTANCE.getParserForType();
-        }
     }
 
     public interface S2COrBuilder extends
@@ -2956,13 +1859,6 @@ package net.runelite.client.party;
                     msgCase_);
         }
 
-        private void clearMsg() {
-            msgCase_ = 0;
-            msg_ = null;
-        }
-
-        public static final int JOIN_FIELD_NUMBER = 1;
-
         /**
          * <code>.party.UserJoin join = 1;</code>
          */
@@ -2997,7 +1893,7 @@ package net.runelite.client.party;
         private void mergeJoin(net.runelite.client.party.Party.UserJoin value) {
             value.getClass();
             if (msgCase_ == 1 &&
-                msg_ != net.runelite.client.party.Party.UserJoin.getDefaultInstance()) {
+                    msg_ != net.runelite.client.party.Party.UserJoin.getDefaultInstance()) {
                 msg_ = net.runelite.client.party.Party.UserJoin.newBuilder((net.runelite.client.party.Party.UserJoin) msg_)
                         .mergeFrom(value).buildPartial();
             } else {
@@ -3015,8 +1911,6 @@ package net.runelite.client.party;
                 msg_ = null;
             }
         }
-
-        public static final int PART_FIELD_NUMBER = 2;
 
         /**
          * <code>.party.UserPart part = 2;</code>
@@ -3049,29 +1943,12 @@ package net.runelite.client.party;
         /**
          * <code>.party.UserPart part = 2;</code>
          */
-        private void mergePart(net.runelite.client.party.Party.UserPart value) {
-            value.getClass();
-            if (msgCase_ == 2 &&
-                msg_ != net.runelite.client.party.Party.UserPart.getDefaultInstance()) {
-                msg_ = net.runelite.client.party.Party.UserPart.newBuilder((net.runelite.client.party.Party.UserPart) msg_)
-                        .mergeFrom(value).buildPartial();
-            } else {
-                msg_ = value;
-            }
-            msgCase_ = 2;
-        }
-
-        /**
-         * <code>.party.UserPart part = 2;</code>
-         */
         private void clearPart() {
             if (msgCase_ == 2) {
                 msgCase_ = 0;
                 msg_ = null;
             }
         }
-
-        public static final int DATA_FIELD_NUMBER = 3;
 
         /**
          * <code>.party.PartyData data = 3;</code>
@@ -3101,122 +1978,18 @@ package net.runelite.client.party;
             msgCase_ = 3;
         }
 
-        /**
-         * <code>.party.PartyData data = 3;</code>
-         */
-        private void mergeData(net.runelite.client.party.Party.PartyData value) {
-            value.getClass();
-            if (msgCase_ == 3 &&
-                msg_ != net.runelite.client.party.Party.PartyData.getDefaultInstance()) {
-                msg_ = net.runelite.client.party.Party.PartyData.newBuilder((net.runelite.client.party.Party.PartyData) msg_)
-                        .mergeFrom(value).buildPartial();
-            } else {
-                msg_ = value;
-            }
-            msgCase_ = 3;
-        }
-
-        /**
-         * <code>.party.PartyData data = 3;</code>
-         */
-        private void clearData() {
-            if (msgCase_ == 3) {
-                msgCase_ = 0;
-                msg_ = null;
-            }
-        }
-
-        public static net.runelite.client.party.Party.S2C parseFrom(
-                java.nio.ByteBuffer data)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data);
-        }
-
-        public static net.runelite.client.party.Party.S2C parseFrom(
-                java.nio.ByteBuffer data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data, extensionRegistry);
-        }
-
-        public static net.runelite.client.party.Party.S2C parseFrom(
-                com.google.protobuf.ByteString data)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data);
-        }
-
-        public static net.runelite.client.party.Party.S2C parseFrom(
-                com.google.protobuf.ByteString data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data, extensionRegistry);
-        }
-
         public static net.runelite.client.party.Party.S2C parseFrom(byte[] data)
                 throws com.google.protobuf.InvalidProtocolBufferException {
             return com.google.protobuf.GeneratedMessageLite.parseFrom(
                     DEFAULT_INSTANCE, data);
         }
 
-        public static net.runelite.client.party.Party.S2C parseFrom(
-                byte[] data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, data, extensionRegistry);
-        }
-
-        public static net.runelite.client.party.Party.S2C parseFrom(java.io.InputStream input)
-                throws java.io.IOException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, input);
-        }
-
-        public static net.runelite.client.party.Party.S2C parseFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws java.io.IOException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, input, extensionRegistry);
-        }
-
-        public static net.runelite.client.party.Party.S2C parseDelimitedFrom(java.io.InputStream input)
-                throws java.io.IOException {
-            return parseDelimitedFrom(DEFAULT_INSTANCE, input);
-        }
-
-        public static net.runelite.client.party.Party.S2C parseDelimitedFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws java.io.IOException {
-            return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
-        }
-
-        public static net.runelite.client.party.Party.S2C parseFrom(
-                com.google.protobuf.CodedInputStream input)
-                throws java.io.IOException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, input);
-        }
-
-        public static net.runelite.client.party.Party.S2C parseFrom(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws java.io.IOException {
-            return com.google.protobuf.GeneratedMessageLite.parseFrom(
-                    DEFAULT_INSTANCE, input, extensionRegistry);
-        }
-
         public static Builder newBuilder() {
-            return (Builder) DEFAULT_INSTANCE.createBuilder();
+            return DEFAULT_INSTANCE.createBuilder();
         }
 
         public static Builder newBuilder(net.runelite.client.party.Party.S2C prototype) {
-            return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+            return DEFAULT_INSTANCE.createBuilder(prototype);
         }
 
         /**
@@ -3236,12 +2009,6 @@ package net.runelite.client.party;
             public MsgCase
             getMsgCase() {
                 return instance.getMsgCase();
-            }
-
-            public Builder clearMsg() {
-                copyOnWrite();
-                instance.clearMsg();
-                return this;
             }
 
 
@@ -3281,24 +2048,6 @@ package net.runelite.client.party;
             }
 
             /**
-             * <code>.party.UserJoin join = 1;</code>
-             */
-            public Builder mergeJoin(net.runelite.client.party.Party.UserJoin value) {
-                copyOnWrite();
-                instance.mergeJoin(value);
-                return this;
-            }
-
-            /**
-             * <code>.party.UserJoin join = 1;</code>
-             */
-            public Builder clearJoin() {
-                copyOnWrite();
-                instance.clearJoin();
-                return this;
-            }
-
-            /**
              * <code>.party.UserPart part = 2;</code>
              */
             @java.lang.Override
@@ -3330,24 +2079,6 @@ package net.runelite.client.party;
                     net.runelite.client.party.Party.UserPart.Builder builderForValue) {
                 copyOnWrite();
                 instance.setPart(builderForValue.build());
-                return this;
-            }
-
-            /**
-             * <code>.party.UserPart part = 2;</code>
-             */
-            public Builder mergePart(net.runelite.client.party.Party.UserPart value) {
-                copyOnWrite();
-                instance.mergePart(value);
-                return this;
-            }
-
-            /**
-             * <code>.party.UserPart part = 2;</code>
-             */
-            public Builder clearPart() {
-                copyOnWrite();
-                instance.clearPart();
                 return this;
             }
 
@@ -3386,30 +2117,12 @@ package net.runelite.client.party;
                 return this;
             }
 
-            /**
-             * <code>.party.PartyData data = 3;</code>
-             */
-            public Builder mergeData(net.runelite.client.party.Party.PartyData value) {
-                copyOnWrite();
-                instance.mergeData(value);
-                return this;
-            }
-
-            /**
-             * <code>.party.PartyData data = 3;</code>
-             */
-            public Builder clearData() {
-                copyOnWrite();
-                instance.clearData();
-                return this;
-            }
-
             // @@protoc_insertion_point(builder_scope:party.S2C)
         }
 
         @java.lang.Override
         @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
-        protected final java.lang.Object dynamicMethod(
+        protected java.lang.Object dynamicMethod(
                 com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
                 java.lang.Object arg0, java.lang.Object arg1) {
             switch (method) {
@@ -3429,7 +2142,7 @@ package net.runelite.client.party;
                     };
                     java.lang.String info =
                             "\u0000\u0003\u0001\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001<\u0000\u0002<" +
-                            "\u0000\u0003<\u0000";
+                                    "\u0000\u0003<\u0000";
                     return newMessageInfo(DEFAULT_INSTANCE, info, objects);
                 }
                 // fall through
@@ -3443,7 +2156,7 @@ package net.runelite.client.party;
                             parser = PARSER;
                             if (parser == null) {
                                 parser =
-                                        new DefaultInstanceBasedParser<net.runelite.client.party.Party.S2C>(
+                                        new DefaultInstanceBasedParser<>(
                                                 DEFAULT_INSTANCE);
                                 PARSER = parser;
                             }
@@ -3474,20 +2187,9 @@ package net.runelite.client.party;
                     S2C.class, defaultInstance);
         }
 
-        public static net.runelite.client.party.Party.S2C getDefaultInstance() {
-            return DEFAULT_INSTANCE;
-        }
-
         private static volatile com.google.protobuf.Parser<S2C> PARSER;
-
-        public static com.google.protobuf.Parser<S2C> parser() {
-            return DEFAULT_INSTANCE.getParserForType();
-        }
     }
 
-
-    static {
-    }
 
     // @@protoc_insertion_point(outer_class_scope)
 }
