@@ -1636,7 +1636,6 @@ public interface Client extends OAuthApi, GameEngine, RenderingClient, GameState
 	 * @see WorldView#getScene()
 	 */
 	@Deprecated
-	@Override
 	default Scene getScene()
 	{
 		var wv = getTopLevelWorldView();
@@ -1650,7 +1649,6 @@ public interface Client extends OAuthApi, GameEngine, RenderingClient, GameState
 	 * @see WorldView#players()
 	 */
 	@Deprecated
-	@Override
 	default List<Player> getPlayers()
 	{
 		var wv = getTopLevelWorldView();
@@ -1666,7 +1664,6 @@ public interface Client extends OAuthApi, GameEngine, RenderingClient, GameState
 	 * @see WorldView#npcs()
 	 */
 	@Deprecated
-	@Override
 	default List<NPC> getNpcs()
 	{
 		var wv = getTopLevelWorldView();
@@ -1682,7 +1679,6 @@ public interface Client extends OAuthApi, GameEngine, RenderingClient, GameState
 	 * @see WorldView#npcs()
 	 */
 	@Deprecated
-	@Override
 	default NPC[] getCachedNPCs()
 	{
 		var wv = getTopLevelWorldView();
@@ -1696,7 +1692,6 @@ public interface Client extends OAuthApi, GameEngine, RenderingClient, GameState
 	 * @see WorldView#players()
 	 */
 	@Deprecated
-	@Override
 	default Player[] getCachedPlayers()
 	{
 		var wv = getTopLevelWorldView();
@@ -1713,7 +1708,6 @@ public interface Client extends OAuthApi, GameEngine, RenderingClient, GameState
 	 */
 	@Nullable
 	@Deprecated
-	@Override
 	default CollisionData[] getCollisionMaps()
 	{
 		return getTopLevelWorldView().getCollisionMaps();
@@ -1828,7 +1822,6 @@ public interface Client extends OAuthApi, GameEngine, RenderingClient, GameState
 	 * @see WorldView#getProjectiles()
 	 */
 	@Deprecated
-	@Override
 	default Deque<Projectile> getProjectiles()
 	{
 		return getTopLevelWorldView().getProjectiles();
