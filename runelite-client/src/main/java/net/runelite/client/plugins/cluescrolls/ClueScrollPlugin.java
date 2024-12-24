@@ -37,15 +37,12 @@ import java.awt.Rectangle;
 import java.awt.geom.Area;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 import java.util.function.Consumer;
 import java.util.stream.Stream;
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import javax.inject.Inject;
 import javax.inject.Named;
 import lombok.Getter;
@@ -54,7 +51,6 @@ import net.runelite.api.ChatMessageType;
 import net.runelite.api.Client;
 import net.runelite.api.EnumComposition;
 import net.runelite.api.EnumID;
-import net.runelite.api.GameObject;
 import net.runelite.api.GameState;
 import net.runelite.api.InventoryID;
 import net.runelite.api.Item;
@@ -119,8 +115,6 @@ import net.runelite.client.plugins.cluescrolls.clues.LocationClueScroll;
 import net.runelite.client.plugins.cluescrolls.clues.LocationsClueScroll;
 import net.runelite.client.plugins.cluescrolls.clues.MapClue;
 import net.runelite.client.plugins.cluescrolls.clues.MusicClue;
-import net.runelite.client.plugins.cluescrolls.clues.NamedObjectClueScroll;
-import net.runelite.client.plugins.cluescrolls.clues.NpcClueScroll;
 import net.runelite.client.plugins.cluescrolls.clues.ObjectClueScroll;
 import net.runelite.client.plugins.cluescrolls.clues.SkillChallengeClue;
 import net.runelite.client.plugins.cluescrolls.clues.ThreeStepCrypticClue;
@@ -237,6 +231,7 @@ public class ClueScrollPlugin extends Plugin
 	@Getter
 	private EmoteClue activeSTASHClue;
 	private EmoteClue clickedSTASHClue;
+	private final ClueHelper clueHelper = new ClueHelper();
 
 	@Provides
 	ClueScrollConfig getConfig(ConfigManager configManager)
@@ -429,7 +424,7 @@ public class ClueScrollPlugin extends Plugin
 					client.clearHintArrow();
 				}
 
-				checkClueNPCs(clue, client.getCachedNPCs());
+				clueHelper.checkClueNPCs(client, config, this, clue, npcsToMark);
 			}
 		}
 	}
@@ -463,7 +458,7 @@ public class ClueScrollPlugin extends Plugin
 	public void onNpcSpawned(final NpcSpawned event)
 	{
 		final NPC npc = event.getNpc();
-		checkClueNPCs(clue, npc);
+		clueHelper.checkClueNPCs(client, config, this, clue, (List<NPC>) npc);
 	}
 
 	@Subscribe
@@ -540,7 +535,7 @@ public class ClueScrollPlugin extends Plugin
 
 	private void tileObjectSpawnedHandler(final TileObject spawned)
 	{
-		checkClueNamedObject(clue, spawned);
+		clueHelper.checkClueNamedObject(clue, spawned, client, namedObjectsToMark);
 	}
 
 	@Subscribe
@@ -647,7 +642,7 @@ public class ClueScrollPlugin extends Plugin
 		else if (namedObjectCheckThisTick)
 		{
 			namedObjectCheckThisTick = false;
-			checkClueNamedObjects(clue);
+			clueHelper.checkClueNamedObjects(clue, client, namedObjectsToMark);
 		}
 
 		// Reset clue when receiving a new beginner or master clue
@@ -964,126 +959,8 @@ public class ClueScrollPlugin extends Plugin
 			});
 	}
 
-	private void checkClueNPCs(ClueScroll clue, final NPC... npcs)
-	{
-		if (!(clue instanceof NpcClueScroll))
-		{
-			return;
-		}
 
-		final NpcClueScroll npcClueScroll = (NpcClueScroll) clue;
-		final String[] clueNpcs = npcClueScroll.getNpcs(this);
-		final Collection<Integer> clueNpcRegions = npcClueScroll.getNpcRegions();
 
-		if (clueNpcs == null || clueNpcs.length == 0)
-		{
-			return;
-		}
-
-		for (NPC npc : npcs)
-		{
-			if (npc == null || npc.getName() == null)
-			{
-				continue;
-			}
-
-			if (!clueNpcRegions.isEmpty() && !clueNpcRegions.contains(npc.getWorldLocation().getRegionID()))
-			{
-				continue;
-			}
-
-			for (String npcName : clueNpcs)
-			{
-				if (!Objects.equals(npc.getName(), npcName))
-				{
-					continue;
-				}
-
-				npcsToMark.add(npc);
-			}
-		}
-
-		if (!npcsToMark.isEmpty() && config.displayHintArrows())
-		{
-			// Always set hint arrow to first seen NPC
-			client.setHintArrow(npcsToMark.get(0));
-		}
-	}
-
-	/**
-	 * Scans all of the current plane's loaded tiles for {@link TileObject}s and passes any found objects to
-	 * {@link ClueScrollPlugin#checkClueNamedObject(ClueScroll, TileObject)} for storing in the cache of discovered
-	 * named objects.
-	 *
-	 * @param clue The active clue scroll
-	 */
-	private void checkClueNamedObjects(@Nullable ClueScroll clue)
-	{
-		if (!(clue instanceof NamedObjectClueScroll))
-		{
-			return;
-		}
-
-		// Search loaded tiles for objects
-		for (final Tile[] tiles : client.getScene().getTiles()[client.getPlane()])
-		{
-			for (final Tile tile : tiles)
-			{
-				if (tile == null)
-				{
-					continue;
-				}
-
-				for (final GameObject object : tile.getGameObjects())
-				{
-					if (object == null)
-					{
-						continue;
-					}
-
-					checkClueNamedObject(clue, object);
-				}
-			}
-		}
-	}
-
-	/**
-	 * Checks passed objects against the active clue's object names and regions. If the clue is a
-	 * {@link NamedObjectClueScroll} and the object matches its allowable object names and is within its regions, the
-	 * object will be stored in the cache of discovered named objects.
-	 *
-	 * @param clue   The active clue scroll
-	 * @param object The spawned or scanned object
-	 */
-	private void checkClueNamedObject(@Nullable final ClueScroll clue, @Nonnull final TileObject object)
-	{
-		if (!(clue instanceof NamedObjectClueScroll))
-		{
-			return;
-		}
-
-		final NamedObjectClueScroll namedObjectClue = (NamedObjectClueScroll) clue;
-
-		final String[] objectNames = namedObjectClue.getObjectNames();
-		final int[] regionIds = namedObjectClue.getObjectRegions();
-
-		if (objectNames == null || objectNames.length == 0
-			|| regionIds != null && !ArrayUtils.contains(regionIds, object.getWorldLocation().getRegionID()))
-		{
-			return;
-		}
-
-		final ObjectComposition comp = client.getObjectDefinition(object.getId());
-		final ObjectComposition impostor = comp.getImpostorIds() != null ? comp.getImpostor() : comp;
-
-		for (final String name : objectNames)
-		{
-			if (comp.getName().equals(name) || impostor.getName().equals(name))
-			{
-				namedObjectsToMark.add(object);
-			}
-		}
-	}
 
 	private void updateClue(final ClueScroll clue)
 	{
@@ -1093,8 +970,8 @@ public class ClueScrollPlugin extends Plugin
 		}
 
 		resetClue(false);
-		checkClueNPCs(clue, client.getCachedNPCs());
-		checkClueNamedObjects(clue);
+		clueHelper.checkClueNPCs(client, config, this, clue, npcsToMark);
+		clueHelper.checkClueNamedObjects(clue, client, namedObjectsToMark);
 		// If we have a clue, save that knowledge
 		// so the clue window doesn't have to be open.
 		this.clue = clue;
