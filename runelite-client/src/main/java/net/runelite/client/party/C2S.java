@@ -136,17 +136,17 @@ public final class C2S extends
      * <code>.party.Data data = 3;</code>
      */
     @java.lang.Override
-    public net.runelite.client.party.Party.Data getData() {
+    public Data getData() {
         if (msgCase_ == 3) {
-            return (net.runelite.client.party.Party.Data) msg_;
+            return (Data) msg_;
         }
-        return net.runelite.client.party.Party.Data.getDefaultInstance();
+        return Data.getDefaultInstance();
     }
 
     /**
      * <code>.party.Data data = 3;</code>
      */
-    private void setData(net.runelite.client.party.Party.Data value) {
+    private void setData(Data value) {
         msg_ = value;
         msgCase_ = 3;
     }
@@ -260,14 +260,14 @@ public final class C2S extends
          * <code>.party.Data data = 3;</code>
          */
         @java.lang.Override
-        public net.runelite.client.party.Party.Data getData() {
+        public Data getData() {
             return instance.getData();
         }
 
         /**
          * <code>.party.Data data = 3;</code>
          */
-        public Builder setData(net.runelite.client.party.Party.Data value) {
+        public Builder setData(Data value) {
             copyOnWrite();
             instance.setData(value);
             return this;
@@ -277,7 +277,7 @@ public final class C2S extends
          * <code>.party.Data data = 3;</code>
          */
         public Builder setData(
-                net.runelite.client.party.Party.Data.Builder builderForValue) {
+                Data.Builder builderForValue) {
             copyOnWrite();
             instance.setData(builderForValue.build());
             return this;
@@ -303,7 +303,7 @@ public final class C2S extends
                         "msgCase_",
                         Join.class,
                         Part.class,
-                        net.runelite.client.party.Party.Data.class,
+                        Data.class,
                 };
                 java.lang.String info =
                         "\u0000\u0003\u0001\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001<\u0000\u0002<" +
