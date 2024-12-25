@@ -139,11 +139,11 @@ public class WSClient extends WebSocketListener implements AutoCloseable
 
 	void join(long partyId, long memberId)
 	{
-		final Party.Join join = Party.Join.newBuilder()
+		final Join join = Join.newBuilder()
 			.setPartyId(partyId)
 			.setMemberId(memberId)
 			.build();
-		final Party.C2S c2s = Party.C2S.newBuilder()
+		final C2S c2s = C2S.newBuilder()
 			.setJoin(join)
 			.build();
 		send(c2s);
@@ -153,7 +153,7 @@ public class WSClient extends WebSocketListener implements AutoCloseable
 	{
 		final Party.Part part = Party.Part.newBuilder()
 			.build();
-		final Party.C2S c2s = Party.C2S.newBuilder()
+		final C2S c2s = C2S.newBuilder()
 			.setPart(part)
 			.build();
 		send(c2s);
@@ -167,13 +167,13 @@ public class WSClient extends WebSocketListener implements AutoCloseable
 			.setType(message.getClass().getSimpleName())
 			.setData(com.google.protobuf.ByteString.copyFromUtf8(json))
 			.build();
-		final Party.C2S c2s = Party.C2S.newBuilder()
+		final C2S c2s = C2S.newBuilder()
 			.setData(data)
 			.build();
 		send(c2s);
 	}
 
-	private void send(Party.C2S message)
+	private void send(C2S message)
 	{
 		if (webSocket == null)
 		{
