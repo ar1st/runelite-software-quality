@@ -228,7 +228,7 @@ public class WSClient extends WebSocketListener implements AutoCloseable
 				eventBus.post(userPart);
 				break;
 			case DATA:
-				Party.PartyData data = s2c.getData();
+				PartyData data = s2c.getData();
 				final WebsocketMessage message;
 
 				try
