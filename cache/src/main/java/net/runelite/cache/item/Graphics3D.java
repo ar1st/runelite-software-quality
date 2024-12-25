@@ -401,10 +401,10 @@ class Graphics3D extends Rasterizer2D {
                             var0 = 0;
                         }
 
+                        var2 -= var0;
+                        var0 -= var1;
+                        var1 = rasterClipY[var1];
                         if (var16 < var15) {
-                            var2 -= var0;
-                            var0 -= var1;
-                            var1 = rasterClipY[var1];
 
                             while (true) {
                                 --var0;
@@ -430,9 +430,6 @@ class Graphics3D extends Rasterizer2D {
                                 var1 += graphicsPixelsWidth;
                             }
                         } else {
-                            var2 -= var0;
-                            var0 -= var1;
-                            var1 = rasterClipY[var1];
 
                             while (true) {
                                 --var0;
@@ -485,10 +482,10 @@ class Graphics3D extends Rasterizer2D {
                         var0 = 0;
                     }
 
+                    var1 -= var0;
+                    var0 -= var2;
+                    var2 = rasterClipY[var2];
                     if (var15 < var17) {
-                        var1 -= var0;
-                        var0 -= var2;
-                        var2 = rasterClipY[var2];
 
                         while (true) {
                             --var0;
@@ -514,9 +511,6 @@ class Graphics3D extends Rasterizer2D {
                             var2 += graphicsPixelsWidth;
                         }
                     } else {
-                        var1 -= var0;
-                        var0 -= var2;
-                        var2 = rasterClipY[var2];
 
                         while (true) {
                             --var0;
@@ -557,10 +551,10 @@ class Graphics3D extends Rasterizer2D {
                         var1 = 0;
                     }
 
+                    var0 -= var1;
+                    var1 -= var2;
+                    var2 = rasterClipY[var2];
                     if (var15 < var17) {
-                        var0 -= var1;
-                        var1 -= var2;
-                        var2 = rasterClipY[var2];
 
                         while (true) {
                             --var1;
@@ -586,9 +580,6 @@ class Graphics3D extends Rasterizer2D {
                             var2 += graphicsPixelsWidth;
                         }
                     } else {
-                        var0 -= var1;
-                        var1 -= var2;
-                        var2 = rasterClipY[var2];
 
                         while (true) {
                             --var1;
@@ -975,10 +966,10 @@ class Graphics3D extends Rasterizer2D {
                         var0 = 0;
                     }
 
+                    var2 -= var0;
+                    var0 -= var1;
+                    var1 = rasterClipY[var1];
                     if (var7 < var8) {
-                        var2 -= var0;
-                        var0 -= var1;
-                        var1 = rasterClipY[var1];
 
                         while (true) {
                             --var0;
@@ -1002,9 +993,6 @@ class Graphics3D extends Rasterizer2D {
                             var1 += graphicsPixelsWidth;
                         }
                     } else {
-                        var2 -= var0;
-                        var0 -= var1;
-                        var1 = rasterClipY[var1];
 
                         while (true) {
                             --var0;
@@ -1053,10 +1041,10 @@ class Graphics3D extends Rasterizer2D {
                     var0 = 0;
                 }
 
+                var1 -= var0;
+                var0 -= var2;
+                var2 = rasterClipY[var2];
                 if (var8 < var9) {
-                    var1 -= var0;
-                    var0 -= var2;
-                    var2 = rasterClipY[var2];
 
                     while (true) {
                         --var0;
@@ -1080,9 +1068,6 @@ class Graphics3D extends Rasterizer2D {
                         var2 += graphicsPixelsWidth;
                     }
                 } else {
-                    var1 -= var0;
-                    var0 -= var2;
-                    var2 = rasterClipY[var2];
 
                     while (true) {
                         --var0;
@@ -1120,10 +1105,10 @@ class Graphics3D extends Rasterizer2D {
                     var1 = 0;
                 }
 
+                var0 -= var1;
+                var1 -= var2;
+                var2 = rasterClipY[var2];
                 if (var8 < var9) {
-                    var0 -= var1;
-                    var1 -= var2;
-                    var2 = rasterClipY[var2];
 
                     while (true) {
                         --var1;
@@ -1147,9 +1132,6 @@ class Graphics3D extends Rasterizer2D {
                         var2 += graphicsPixelsWidth;
                     }
                 } else {
-                    var0 -= var1;
-                    var1 -= var2;
-                    var2 = rasterClipY[var2];
 
                     while (true) {
                         --var1;
@@ -1629,10 +1611,10 @@ class Graphics3D extends Rasterizer2D {
                             var32 += var34 * var41;
                             var35 += var37 * var41;
                             var38 += var40 * var41;
+                            var2 -= var0;
+                            var0 -= var1;
+                            var1 = rasterClipY[var1];
                             if (var26 < var27) {
-                                var2 -= var0;
-                                var0 -= var1;
-                                var1 = rasterClipY[var1];
 
                                 while (true) {
                                     --var0;
@@ -1664,9 +1646,6 @@ class Graphics3D extends Rasterizer2D {
                                     var38 += var40;
                                 }
                             } else {
-                                var2 -= var0;
-                                var0 -= var1;
-                                var1 = rasterClipY[var1];
 
                                 while (true) {
                                     --var0;
@@ -1729,10 +1708,10 @@ class Graphics3D extends Rasterizer2D {
                         var32 += var34 * var41;
                         var35 += var37 * var41;
                         var38 += var40 * var41;
+                        var1 -= var0;
+                        var0 -= var2;
+                        var2 = rasterClipY[var2];
                         if (var27 < var28) {
-                            var1 -= var0;
-                            var0 -= var2;
-                            var2 = rasterClipY[var2];
 
                             while (true) {
                                 --var0;
@@ -1764,9 +1743,6 @@ class Graphics3D extends Rasterizer2D {
                                 var38 += var40;
                             }
                         } else {
-                            var1 -= var0;
-                            var0 -= var2;
-                            var2 = rasterClipY[var2];
 
                             while (true) {
                                 --var0;
@@ -1817,10 +1793,10 @@ class Graphics3D extends Rasterizer2D {
                         var32 += var34 * var41;
                         var35 += var37 * var41;
                         var38 += var40 * var41;
+                        var0 -= var1;
+                        var1 -= var2;
+                        var2 = rasterClipY[var2];
                         if (var27 < var28) {
-                            var0 -= var1;
-                            var1 -= var2;
-                            var2 = rasterClipY[var2];
 
                             while (true) {
                                 --var1;
@@ -1852,9 +1828,6 @@ class Graphics3D extends Rasterizer2D {
                                 var38 += var40;
                             }
                         } else {
-                            var0 -= var1;
-                            var1 -= var2;
-                            var2 = rasterClipY[var2];
 
                             while (true) {
                                 --var1;
