@@ -3,16 +3,9 @@
 
 package net.runelite.client.party;
 
-/* public */ final class Party {
+final class Party {
     private Party() {
     }
-
-
-
-
-    /**
-     * Protobuf type {@code party.Part}
-     */
 
     public interface DataOrBuilder extends
             // @@protoc_insertion_point(interface_extends:party.Data)
@@ -87,7 +80,7 @@ package net.runelite.client.party;
          */
         Data getData();
 
-        public C2S.MsgCase getMsgCase();
+        C2S.MsgCase getMsgCase();
     }
 
     /**
@@ -199,9 +192,7 @@ package net.runelite.client.party;
          */
         PartyData getData();
 
-        public S2C.MsgCase getMsgCase();
+        S2C.MsgCase getMsgCase();
     }
 
-
-    // @@protoc_insertion_point(outer_class_scope)
 }

@@ -43,7 +43,6 @@ public final class Data extends
      */
     private void setType(
             String value) {
-        Class<?> valueClass = value.getClass();
 
         type_ = value;
     }
@@ -66,7 +65,6 @@ public final class Data extends
      * @param value The data to set.
      */
     private void setData(com.google.protobuf.ByteString value) {
-        Class<?> valueClass = value.getClass();
 
         data_ = value;
     }
@@ -155,7 +153,7 @@ public final class Data extends
     }
 
     @Override
-    @SuppressWarnings({"unchecked", "fallthrough"})
+    @SuppressWarnings({"fallthrough"})
     protected Object dynamicMethod(
             MethodToInvoke method,
             Object arg0, Object arg1) {
