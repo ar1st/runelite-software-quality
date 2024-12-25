@@ -83,7 +83,6 @@ public final class C2S extends
      * <code>.party.Join join = 1;</code>
      */
     private void setJoin(Join value) {
-        value.getClass();
         msg_ = value;
         msgCase_ = 1;
     }
@@ -100,18 +99,17 @@ public final class C2S extends
      * <code>.party.Part part = 2;</code>
      */
     @java.lang.Override
-    public net.runelite.client.party.Party.Part getPart() {
+    public Part getPart() {
         if (msgCase_ == 2) {
-            return (net.runelite.client.party.Party.Part) msg_;
+            return (Part) msg_;
         }
-        return net.runelite.client.party.Party.Part.getDefaultInstance();
+        return Part.getDefaultInstance();
     }
 
     /**
      * <code>.party.Part part = 2;</code>
      */
-    private void setPart(net.runelite.client.party.Party.Part value) {
-        value.getClass();
+    private void setPart(Part value) {
         msg_ = value;
         msgCase_ = 2;
     }
@@ -149,7 +147,6 @@ public final class C2S extends
      * <code>.party.Data data = 3;</code>
      */
     private void setData(net.runelite.client.party.Party.Data value) {
-        value.getClass();
         msg_ = value;
         msgCase_ = 3;
     }
@@ -228,14 +225,14 @@ public final class C2S extends
          * <code>.party.Part part = 2;</code>
          */
         @java.lang.Override
-        public net.runelite.client.party.Party.Part getPart() {
+        public Part getPart() {
             return instance.getPart();
         }
 
         /**
          * <code>.party.Part part = 2;</code>
          */
-        public Builder setPart(net.runelite.client.party.Party.Part value) {
+        public Builder setPart(Part value) {
             copyOnWrite();
             instance.setPart(value);
             return this;
@@ -245,7 +242,7 @@ public final class C2S extends
          * <code>.party.Part part = 2;</code>
          */
         public Builder setPart(
-                net.runelite.client.party.Party.Part.Builder builderForValue) {
+                Part.Builder builderForValue) {
             copyOnWrite();
             instance.setPart(builderForValue.build());
             return this;
@@ -289,7 +286,7 @@ public final class C2S extends
     }
 
     @java.lang.Override
-    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    @java.lang.SuppressWarnings({"fallthrough"})
     protected java.lang.Object dynamicMethod(
             com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
             java.lang.Object arg0, java.lang.Object arg1) {
@@ -305,7 +302,7 @@ public final class C2S extends
                         "msg_",
                         "msgCase_",
                         Join.class,
-                        net.runelite.client.party.Party.Part.class,
+                        Part.class,
                         net.runelite.client.party.Party.Data.class,
                 };
                 java.lang.String info =

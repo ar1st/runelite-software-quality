@@ -151,7 +151,7 @@ public class WSClient extends WebSocketListener implements AutoCloseable
 
 	void part()
 	{
-		final Party.Part part = Party.Part.newBuilder()
+		final Part part = Part.newBuilder()
 			.build();
 		final C2S c2s = C2S.newBuilder()
 			.setPart(part)
@@ -222,7 +222,7 @@ public class WSClient extends WebSocketListener implements AutoCloseable
 				eventBus.post(userJoin);
 				break;
 			case PART:
-				Party.UserPart part = s2c.getPart();
+				net.runelite.client.party.UserPart part = s2c.getPart();
 				UserPart userPart = new UserPart(part.getMemberId());
 				log.debug("Got: {}", userPart);
 				eventBus.post(userPart);

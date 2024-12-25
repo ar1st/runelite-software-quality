@@ -30,7 +30,7 @@ public final class Join extends
     }
 
     @java.lang.Override
-    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    @java.lang.SuppressWarnings({"fallthrough"})
     protected java.lang.Object dynamicMethod(
             com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
             java.lang.Object arg0, java.lang.Object arg1) {
