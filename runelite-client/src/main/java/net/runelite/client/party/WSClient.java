@@ -202,10 +202,10 @@ public class WSClient extends WebSocketListener implements AutoCloseable
 	@Override
 	public void onMessage(WebSocket webSocket, ByteString bytes)
 	{
-		Party.S2C s2c;
+		S2C s2c;
 		try
 		{
-			s2c = Party.S2C.parseFrom(bytes.toByteArray());
+			s2c = S2C.parseFrom(bytes.toByteArray());
 		}
 		catch (InvalidProtocolBufferException e)
 		{
